@@ -88,5 +88,16 @@ namespace LeetCode.Problems.Tests.HashTable.Easy
             }
 
         }
+
+        [Fact]
+        public void VerifyingAnAlienDictionaryTest()
+        {
+            var solution = new VerifyingAnAlienDictionary();
+
+            Assert.True(solution.IsAlienSorted(new string[] { "hello", "leetcode" }, "hlabcdefgijkmnopqrstuvwxyz"));
+            Assert.False(solution.IsAlienSorted(new string[] { "word", "world", "row" }, "worldabcefghijkmnpqstuvxyz"));
+            Assert.False(solution.IsAlienSorted(new string[] { "apple", "app" }, "abcdefghijklmnopqrstuvwxyz"));
+            Assert.True(solution.IsAlienSorted(new string[] { "apple" }, "abcdefghijklmnopqrstuvwxyz"));
+        }
     }
 }
