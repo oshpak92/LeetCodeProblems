@@ -7,6 +7,7 @@ namespace LeetCode.Problems.Arrays.Easy
     /// <summary>
     /// 905. Sort Array By Parity
     /// https://leetcode.com/problems/sort-array-by-parity/
+    /// Efficiency 95%
     /// </summary>
     public class SortArrayByParityProblem
     {
