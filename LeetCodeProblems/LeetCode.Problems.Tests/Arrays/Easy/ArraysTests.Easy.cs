@@ -19,5 +19,18 @@ namespace LeetCode.Problems.Tests.Arrays.Easy
             Assert.Equal(new int[] { 0, 1, 3 }, solution.SortArrayByParity(new int[] { 0, 1, 3 }));
             Assert.Equal(new int[] { 1, 3, 5 }, solution.SortArrayByParity(new int[] { 1, 3, 5 }));
         }
+
+        [Fact]
+        public void FlippingAnImageTest()
+        {
+            var solution = new FlippingAnImageSolution();
+            Assert.Equal(new int[][] { new int[] { 1, 0, 0}, new int[] { 0, 1, 0}, new int[] { 1, 1, 1} }, 
+                solution.FlipAndInvertImage(new int[][] { new int[] { 1, 1, 0 } , new int[] { 1, 0, 1 }, new int[] { 0, 0, 0 } }));
+
+            Assert.Equal(new int[][] { new int[] { 1, 1, 0, 0 }, new int[] { 0, 1, 1, 0 }, new int[] { 0, 0, 0, 1 }, new int[] { 1, 0, 1, 0 } }, 
+                solution.FlipAndInvertImage(new int[][] { new int[] { 1, 1, 0, 0 } , new int[] { 1, 0, 0, 1 }, new int[] { 0, 1, 1, 1 }, new int[] { 1, 0, 1, 0 } }));
+        }
+
+
     }
 }
