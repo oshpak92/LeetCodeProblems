@@ -31,6 +31,16 @@ namespace LeetCode.Problems.Tests.Arrays.Easy
                 solution.FlipAndInvertImage(new int[][] { new int[] { 1, 1, 0, 0 } , new int[] { 1, 0, 0, 1 }, new int[] { 0, 1, 1, 1 }, new int[] { 1, 0, 1, 0 } }));
         }
 
+        [Fact]
+        public void ArrayPairSumTest()
+        {
+            var solution = new ArrayPairSumProblem();
+
+            Assert.Equal(4, solution.ArrayPairSum(new int[] { 1, 4, 3, 2 }));
+            Assert.Equal(4, solution.ArrayPairSum(new int[] { 1, 2, 3, 4 }));
+            Assert.Equal(4, solution.ArrayPairSum(new int[] { 1, 1, 3, 4 }));
+        }
+
 
     }
 }

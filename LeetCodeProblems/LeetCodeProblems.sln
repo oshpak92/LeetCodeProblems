@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode.Problems", "LeetCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode.Problems.Tests", "LeetCode.Problems.Tests\LeetCode.Problems.Tests.csproj", "{86D82964-A41B-4BF9-BE4C-09884720893B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interviewbit.Problems", "Interviewbit.Problems\Interviewbit.Problems.csproj", "{FB986048-2C19-487E-9694-A34FDBC55846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interviewbit.Problems", "Interviewbit.Problems\Interviewbit.Problems.csproj", "{FB986048-2C19-487E-9694-A34FDBC55846}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interviewbit.Problems.Tests", "Interviewbit.Tests\Interviewbit.Problems.Tests.csproj", "{7FEBBB9D-5AB3-4F9E-B204-D9E88C4BCB4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interviewbit.Problems.Tests", "Interviewbit.Tests\Interviewbit.Problems.Tests.csproj", "{7FEBBB9D-5AB3-4F9E-B204-D9E88C4BCB4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B6705259-8411-4335-8A28-8E14AD237153}"
+	ProjectSection(SolutionItems) = preProject
+		..\Statistic.txt = ..\Statistic.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
