@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace LeetCode.Problems.Tests.Arrays.Easy
+namespace LeetCode.Problems.Tests.Arrays
 {
     public partial class ArraysTests
     {
