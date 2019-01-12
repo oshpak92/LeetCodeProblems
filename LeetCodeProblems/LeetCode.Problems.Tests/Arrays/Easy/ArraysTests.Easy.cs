@@ -41,6 +41,20 @@ namespace LeetCode.Problems.Tests.Arrays.Easy
             Assert.Equal(4, solution.ArrayPairSum(new int[] { 1, 1, 3, 4 }));
         }
 
+        [Fact]
+        public void FibTest()
+        {
+            var solution = new FibonacciNumberProblem();
+
+            Assert.Equal(1, solution.Fib(2));
+            Assert.Equal(2, solution.Fib(3));
+            Assert.Equal(3, solution.Fib(4));
+
+            Assert.Equal(1, solution.FibRecursive(2));
+            Assert.Equal(2, solution.FibRecursive(3));
+            Assert.Equal(3, solution.FibRecursive(4));
+        }
+
 
     }
 }
