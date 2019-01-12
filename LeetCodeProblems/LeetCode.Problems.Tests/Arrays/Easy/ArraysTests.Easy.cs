@@ -62,7 +62,5 @@ namespace LeetCode.Problems.Tests.Arrays.Easy
 
             Assert.Equal(new int[] { 4, 5, 2, 7 }, solution.SortArrayByParityII(new int[] { 4, 2, 5, 7 }));
         }
-
-
     }
 }
