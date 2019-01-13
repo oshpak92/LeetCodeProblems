@@ -86,5 +86,14 @@ namespace LeetCode.Problems.Tests.Arrays
             solution.MoveZeroes(input2);
             Assert.Equal(new int[] { 1, -3, 0, 0, 0 }, input2);
         }
+
+
+        [Fact]
+        public void MajorityElementProblemTest()
+        {
+            var solution = new MajorityElementProblem();
+            Assert.Equal(3, solution.MajorityElement(new int[] { 3, 2, 3 }));
+            Assert.Equal(2, solution.MajorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
+        }
     }
 }
