@@ -70,8 +70,21 @@ namespace LeetCode.Problems.Tests.Arrays
             var result = solution.Transpose(new int[][] { new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8, 9 } });
             Assert.Equal(new int[][] { new int[] { 1, 4, 7 }, new int[] { 2, 5, 8 }, new int[] { 3, 6, 9 } },
                 solution.Transpose(new int[][] { new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8, 9 } }));
-            Assert.Equal(new int[][] { new int [] {1, 4} , new int[] { 2, 5}, new int[] { 3, 6} },
-                solution.Transpose(new int[][]{ new int[] { 1, 2, 3 } , new int[] {4, 5, 6} }));
+            Assert.Equal(new int[][] { new int[] { 1, 4 }, new int[] { 2, 5 }, new int[] { 3, 6 } },
+                solution.Transpose(new int[][] { new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 } }));
+        }
+
+        [Fact]
+        public void MoveZeroesProblemTest()
+        {
+            var solution = new MoveZeroesProblem();
+            var input1 = new int[] { 0, 1, 0, 3, 12 };
+            solution.MoveZeroes(input1);
+            Assert.Equal(new int[] { 1, 3, 12, 0, 0 }, input1);
+
+            var input2 = new int[] { 0, 1, 0, -3, 0 };
+            solution.MoveZeroes(input2);
+            Assert.Equal(new int[] { 1, -3, 0, 0, 0 }, input2);
         }
     }
 }
