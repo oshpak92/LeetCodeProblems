@@ -19,5 +19,13 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(new int[] { 3, 4, 2, 3, 2 }, solution.PancakeSort(new int[] { 3, 2, 4, 1 }));
             Assert.Equal(new int[] { }, solution.PancakeSort(new int[] { 1,2,3 }));
         }
+
+        [Fact]
+        public void FindtheDuplicateNumberProblemTest()
+        {
+            var solution = new FindtheDuplicateNumberProblem();
+            Assert.Equal(2, solution.FindDuplicate(new int[] { 1, 3, 4, 2, 2 }));
+            Assert.Equal(3, solution.FindDuplicate(new int[] { 3, 1, 3, 4, 2 }));
+        }
     }
 }
