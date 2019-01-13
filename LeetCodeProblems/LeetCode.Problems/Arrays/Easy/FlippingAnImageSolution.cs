@@ -13,6 +13,7 @@ namespace LeetCode.Problems.Arrays.Easy
     {
         public int[][] FlipAndInvertImage(int[][] A)
         {
+
             foreach (var row in A)
             {
                 for (var j = 0; j < (A.Length + 1) / 2; ++j)
