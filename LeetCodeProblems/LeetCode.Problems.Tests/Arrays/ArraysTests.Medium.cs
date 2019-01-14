@@ -27,5 +27,12 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(2, solution.FindDuplicate(new int[] { 1, 3, 4, 2, 2 }));
             Assert.Equal(3, solution.FindDuplicate(new int[] { 3, 1, 3, 4, 2 }));
         }
+
+        [Fact]
+        public void FindAllDuplicatesinanArrayProblemTest()
+        {
+            var solution = new FindAllDuplicatesinanArrayProblem();
+            Assert.Equal(new List<int>() { 2, 3 }, solution.FindDuplicates(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 }));
+        }
     }
 }

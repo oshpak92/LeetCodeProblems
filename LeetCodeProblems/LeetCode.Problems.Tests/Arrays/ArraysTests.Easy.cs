@@ -95,5 +95,12 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(3, solution.MajorityElement(new int[] { 3, 2, 3 }));
             Assert.Equal(2, solution.MajorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
         }
+
+        [Fact]
+        public void ContainsDuplicateProblemTest()
+        {
+            var solution = new ContainsDuplicateProblem();
+            Assert.True(solution.ContainsDuplicate(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 }));
+        }
     }
 }
