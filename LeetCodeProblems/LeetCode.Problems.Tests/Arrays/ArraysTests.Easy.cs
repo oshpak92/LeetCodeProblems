@@ -129,5 +129,18 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal( 2, solution.MissingNumber(new int[] { 3, 0, 1 }));
             Assert.Equal( 8, solution.MissingNumber(new int[] { 9, 6, 4, 2, 3, 5, 7, 0, 1 }));
         }
+
+        [Fact]
+        public void PascalsTriangleProblemTest()
+        {
+            var solution = new PascalsTriangleProblem();
+            var result = solution.Generate(5);
+
+            Assert.Equal( new List<int>() { 1 }, result[0]);
+            Assert.Equal(new List<int>() { 1, 1 }, result[1]);
+            Assert.Equal(new List<int>() { 1, 2, 1 }, result[2]);
+            Assert.Equal(new List<int>() { 1, 3, 3, 1 }, result[3]);
+            Assert.Equal(new List<int>() { 1, 4, 6, 4, 1 }, result[4]);
+        }
     }
 }
