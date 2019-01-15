@@ -142,5 +142,16 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(new List<int>() { 1, 3, 3, 1 }, result[3]);
             Assert.Equal(new List<int>() { 1, 4, 6, 4, 1 }, result[4]);
         }
+
+        [Fact]
+        public void PlusOneProblemTest()
+        {
+            var solution = new PlusOneProblem();
+
+            Assert.Equal(new int[] { 1, 2, 4 }, solution.PlusOne(new int[] { 1, 2, 3 }));
+            Assert.Equal(new int[] { 4, 3, 2, 2 }, solution.PlusOne(new int[] { 4, 3, 2, 1 }));
+            Assert.Equal(new int[] { 1, 0, 0, 0, 0  }, solution.PlusOne(new int[] { 9, 9, 9, 9 }));
+            Assert.Equal(new int[] { 1 }, solution.PlusOne(new int[] { 0 }));
+        }
     }
 }
