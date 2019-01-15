@@ -102,5 +102,14 @@ namespace LeetCode.Problems.Tests.Arrays
             var solution = new ContainsDuplicateProblem();
             Assert.True(solution.ContainsDuplicate(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 }));
         }
+
+        [Fact]
+        public void BestTimetoBuyandSellStockIIProblemTest()
+        {
+            var solution = new BestTimetoBuyandSellStockIIProblem();
+            Assert.Equal(7, solution.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
+            Assert.Equal(4, solution.MaxProfit(new int[] { 1, 2, 3, 4, 5 }));
+            Assert.Equal(0, solution.MaxProfit(new int[] { }));
+        }
     }
 }
