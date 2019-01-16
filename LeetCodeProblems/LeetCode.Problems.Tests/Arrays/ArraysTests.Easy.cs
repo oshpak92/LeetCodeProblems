@@ -153,5 +153,13 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(new int[] { 1, 0, 0, 0, 0  }, solution.PlusOne(new int[] { 9, 9, 9, 9 }));
             Assert.Equal(new int[] { 1 }, solution.PlusOne(new int[] { 0 }));
         }
+
+        [Fact]
+        public void RemoveDuplicatesfromSortedArrayProblemTest()
+        {
+            var solution = new RemoveDuplicatesfromSortedArrayProblem();
+            Assert.Equal(2, solution.RemoveDuplicates(new int[] { 1, 1, 2 }));
+            Assert.Equal(5, solution.RemoveDuplicates(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 }));
+        }
     }
 }
