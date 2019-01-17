@@ -186,5 +186,38 @@ namespace LeetCode.Problems.Tests.Arrays
             solution.Merge(nums1, 3, new int[] { 1, 2, 3 }, 3);
             Assert.Equal(new int[] { 1, 2, 3, 4, 5, 6 }, nums1);
         }
+
+        [Fact]
+        public void RotateArrayProblemTest()
+        {
+            var solution = new RotateArrayProblem();
+            var input = new int[] { 1 };
+            solution.Rotate(input, 10);
+            Assert.Equal(new int[] { 1 }, input);
+            input = new int[] { 1, 2 };
+            solution.Rotate(input, 2);
+            Assert.Equal(new int[] { 1, 2 }, input);
+
+            input = new int[] { };
+            solution.Rotate(input, 10);
+            Assert.Equal(new int[] { }, input);
+
+            input = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            solution.Rotate(input, 3);
+            Assert.Equal(new int[] { 5, 6, 7, 1, 2, 3, 4 }, input);
+
+            input = new int[] { -1, -100, 3, 99 };
+            solution.Rotate(input, 2);
+            Assert.Equal(new int[] { 3, 99, -1, -100 }, input);
+
+            input = new int[] { 1, 2, 3, 4, 5, 6 };
+            solution.Rotate(input, 2);
+            Assert.Equal(new int[] { 5, 6, 1, 2, 3, 4 }, input);
+
+            input = new int[] { 1, 2, 3, 4, 5, 6 };
+            solution.Rotate(input, 3);
+            Assert.Equal(new int[] { 4, 5, 6, 1, 2, 3 }, input);
+        }
+
     }
 }
