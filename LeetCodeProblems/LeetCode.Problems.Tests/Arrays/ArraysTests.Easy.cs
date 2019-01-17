@@ -1,4 +1,5 @@
 ﻿using LeetCode.Problems.Arrays.Easy;
+using LeetCode.Problems.Arrays.Medium;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -218,6 +219,5 @@ namespace LeetCode.Problems.Tests.Arrays
             solution.Rotate(input, 3);
             Assert.Equal(new int[] { 4, 5, 6, 1, 2, 3 }, input);
         }
-
     }
 }

@@ -2,8 +2,10 @@
 using LeetCode.Problems.Arrays.Medium;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
+using static LeetCode.Problems.Arrays.Medium.RotateListProblem;
 
 namespace LeetCode.Problems.Tests.Arrays
 {
@@ -33,6 +35,64 @@ namespace LeetCode.Problems.Tests.Arrays
         {
             var solution = new FindAllDuplicatesinanArrayProblem();
             Assert.Equal(new List<int>() { 2, 3 }, solution.FindDuplicates(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 }));
+        }
+
+
+        [Fact]
+        public void RotateListProblemTest()
+        {
+            var solution = new RotateListProblem();
+            var head = new ListNode(0)
+            {
+                next = new ListNode(1)
+                {
+                    next = new ListNode(2)
+                    {
+                        next = new ListNode(3)
+                        {
+                            next = new ListNode(4)
+                            {
+                                next = new ListNode(5)
+                                {
+                                    next = null
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            print(head);
+            Debug.WriteLine($"==============================================");
+            var newHead = solution.RotateRight(head, 2000000000);
+            print(newHead);
+            Debug.WriteLine($"==============================================");
+            var head2 = new ListNode(0);
+            print(head2);
+            Debug.WriteLine($"==============================================");
+            var newHead1 = solution.RotateRight(head2, 2);
+            print(newHead1);
+            Debug.WriteLine($"==============================================");
+
+            var head3 = new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    next = null
+                }
+            };
+            print(head3);
+            var newHead3 = solution.RotateRight(head3, 2);
+            print(newHead3);
+        }
+
+        private void print(ListNode node)
+        {
+            Debug.Write($"[{node.val}]");
+
+            if (node.next == null)
+                return;
+
+            print(node.next);
         }
     }
 }

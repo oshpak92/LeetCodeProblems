@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LeetCode.Problems.Utils\LeetCode.Problems.Utils.csproj" />
     <ProjectReference Include="..\LeetCode.Problems\LeetCode.Problems.csproj" />
   </ItemGroup>
 
