@@ -37,6 +37,13 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(new List<int>() { 2, 3 }, solution.FindDuplicates(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 }));
         }
 
+        [Fact]
+        public void ProductofArrayExceptSelfProblemTest()
+        {
+            var solution = new ProductofArrayExceptSelfProblem();
+            Assert.Equal(new int[] { 24, 12, 8, 6 }, solution.ProductExceptSelf(new int[] { 1, 2, 3, 4 }));
+        }
+
 
         [Fact]
         public void RotateListProblemTest()
