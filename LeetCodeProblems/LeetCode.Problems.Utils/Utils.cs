@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Text;
 
 namespace LeetCode.Problems.Utils
 {
@@ -14,6 +16,21 @@ namespace LeetCode.Problems.Utils
             }
 
             return arr;
+        }
+
+        public static void PrintMatrix(int[,] matrix)
+        {
+            var builder = new StringBuilder();
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    builder.Append(matrix[i,j]).Append(",");
+                }
+                builder.AppendLine();
+            }
+
+            Debug.WriteLine(builder.ToString());
         }
     }
 }

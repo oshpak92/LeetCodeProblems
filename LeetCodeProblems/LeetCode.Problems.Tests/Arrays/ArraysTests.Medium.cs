@@ -1,5 +1,6 @@
 ﻿using LeetCode.Problems.Arrays.Easy;
 using LeetCode.Problems.Arrays.Medium;
+using LeetCode.Problems.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,7 +20,7 @@ namespace LeetCode.Problems.Tests.Arrays
 
             var pancakeSort = solution.PancakeSort(new int[] { 3, 2, 4, 1 });
             Assert.Equal(new int[] { 3, 4, 2, 3, 2 }, solution.PancakeSort(new int[] { 3, 2, 4, 1 }));
-            Assert.Equal(new int[] { }, solution.PancakeSort(new int[] { 1,2,3 }));
+            Assert.Equal(new int[] { }, solution.PancakeSort(new int[] { 1, 2, 3 }));
         }
 
         [Fact]
@@ -43,6 +44,20 @@ namespace LeetCode.Problems.Tests.Arrays
             var solution = new ProductofArrayExceptSelfProblem();
             Assert.Equal(new int[] { 24, 12, 8, 6 }, solution.ProductExceptSelf(new int[] { 1, 2, 3, 4 }));
         }
+
+        [Fact]
+        public void RotateImageProblemsTest()
+        {
+            var solution = new RotateImageProblems();
+
+            var matrix = new int[,] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16} };
+            //var matrix = new int[,] { { 1, 2, 3 }, {4, 5, 6}, {7, 8, 9 } };
+
+            Helperrs.PrintMatrix(matrix);
+            solution.Rotate(matrix);
+            Helperrs.PrintMatrix(matrix);
+        }
+
 
 
         [Fact]

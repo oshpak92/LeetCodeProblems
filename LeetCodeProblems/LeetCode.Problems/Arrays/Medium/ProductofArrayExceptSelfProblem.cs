@@ -10,7 +10,7 @@ namespace LeetCode.Problems.Arrays.Medium
     /// https://leetcode.com/problems/product-of-array-except-self/
     /// Runtime: 320 ms, faster than 63.87% of C# online submissions for Product of Array Except Self.
     /// </summary>
-    public class ProductofArrayExceptSelfProblemі
+    public class ProductofArrayExceptSelfProblem
     {
         public int[] ProductExceptSelf(int[] nums)
         {
