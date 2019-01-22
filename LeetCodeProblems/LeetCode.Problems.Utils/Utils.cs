@@ -32,5 +32,24 @@ namespace LeetCode.Problems.Utils
 
             Debug.WriteLine(builder.ToString());
         }
+
+
+        public static void PrintMatrix(int[][] matrix)
+        {
+            var builder = new StringBuilder();
+            var n = matrix[0].Length;
+            var m = matrix.GetLength(0);
+
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    builder.Append(matrix[i][j]).Append(",");
+                }
+                builder.AppendLine();
+            }
+
+            Debug.WriteLine(builder.ToString());
+        }
     }
 }

@@ -58,6 +58,18 @@ namespace LeetCode.Problems.Tests.Arrays
             Helperrs.PrintMatrix(matrix);
         }
 
+        [Fact]
+        public void GameOfLifeProblemTest()
+        {
+            var solution = new GameOfLifeProblem();
+
+            var matrix = new int[][] {new int[] { 0, 1, 0}, new int[] { 0, 0, 1 }, new int[] { 1, 1, 1 }, new int[] { 0,0,0 } };
+
+            Helperrs.PrintMatrix(matrix);
+            solution.GameOfLife(matrix);
+            Helperrs.PrintMatrix(matrix);
+        }
+
 
 
         [Fact]
