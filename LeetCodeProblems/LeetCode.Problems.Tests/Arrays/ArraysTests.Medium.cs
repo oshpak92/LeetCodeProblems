@@ -171,5 +171,17 @@ namespace LeetCode.Problems.Tests.Arrays
             var solution = new FindPeakElementProblem();
             Assert.Equal(2, solution.FindPeakElement(new int[] { 1, 2, 3, 1 }));
         }
+
+        [Fact]
+        public void ContainerWithMostWaterTest()
+        {
+            var solution = new ContainerWithMostWaterProblem();
+            Assert.Equal(49, solution.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }));
+            Assert.Equal(0, solution.MaxArea(new int[] { 0, 2 }));
+            Assert.Equal(0, solution.MaxArea(new int[] { 0, 0 }));
+            Assert.Equal(2, solution.MaxArea(new int[] { 1, 0, 1 }));
+            Assert.Equal(0, solution.MaxArea(new int[] { 1 }));
+            Assert.Equal(0, solution.MaxArea(new int[] {  }));
+        }
     }
 }
