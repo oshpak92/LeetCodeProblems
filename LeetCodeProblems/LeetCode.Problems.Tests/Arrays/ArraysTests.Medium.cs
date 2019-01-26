@@ -163,19 +163,13 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(1, solution.searchPivot(new int[] { 7, 8, 1, 2, 3, 4, 5, 6 }, 0, 7));
             Assert.Equal(7, solution.searchPivot(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 }, 0, 7));
             Assert.Equal(0, solution.searchPivot(new int[] { 3, 1 }, 0, 1));
-
-
-            //Assert.Equal(1, solution.Search(new int[] { 4, 5, 6, 7, 8, 1, 2 }, 5));
-            //Assert.Equal(-1, solution.Search(new int[] { 4, 5, 6, 7, 8, 1, 2 }, 10));
-            //Assert.Equal(4, solution.Search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 0));
-            //Assert.Equal(-1, solution.Search(new int[] { 1 }, 0));
-            //Assert.Equal(-1, solution.Search(new int[] { 1, 3 }, 0));
-            //Assert.Equal(-1, solution.Search(new int[] { 1, 3 }, 2));
-            //Assert.Equal(-1, solution.Search(new int[] { 1, 3, 5 }, 4));
-            //Assert.Equal(-1, solution.Search(new int[] { 3, 5, 1 }, 0));
-            //Assert.Equal(-1, solution.Search(new int[] { 5, 1,3}, 0));
-            //Assert.Equal(3, solution.Search(new int[] { 7, 8, 1, 2, 3, 4, 5, 6}, 2));
         }
 
+        [Fact]
+        public void FindPeakElementProblemTest()
+        {
+            var solution = new FindPeakElementProblem();
+            Assert.Equal(2, solution.FindPeakElement(new int[] { 1, 2, 3, 1 }));
+        }
     }
 }
