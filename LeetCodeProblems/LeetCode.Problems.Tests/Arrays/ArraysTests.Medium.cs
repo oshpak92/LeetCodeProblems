@@ -242,5 +242,17 @@ namespace LeetCode.Problems.Tests.Arrays
             solution.SetZeroes(matrix2);
             Helperrs.PrintMatrix(matrix2);
         }
+
+        [Fact]
+        public void UniquePathsProblemTest()
+        {
+            var solution = new UniquePathsProblem();
+            Assert.Equal(3, solution.UniquePaths(3, 2));
+            Assert.Equal(2, solution.UniquePaths(2, 2));
+            Assert.Equal(1, solution.UniquePaths(1, 2));
+            //Assert.Equal(1, solution.UniquePaths(1, 0));
+            //Assert.Equal(0, solution.UniquePaths(0, 0));
+            Assert.Equal(70, solution.UniquePaths(5, 5));
+        }
     }
 }
