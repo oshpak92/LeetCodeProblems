@@ -50,7 +50,7 @@ namespace LeetCode.Problems.Tests.Arrays
         {
             var solution = new RotateImageProblems();
 
-            var matrix = new int[,] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16} };
+            var matrix = new int[,] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
             //var matrix = new int[,] { { 1, 2, 3 }, {4, 5, 6}, {7, 8, 9 } };
 
             Helperrs.PrintMatrix(matrix);
@@ -63,7 +63,7 @@ namespace LeetCode.Problems.Tests.Arrays
         {
             var solution = new GameOfLifeProblem();
 
-            var matrix = new int[][] {new int[] { 0, 1, 0}, new int[] { 0, 0, 1 }, new int[] { 1, 1, 1 }, new int[] { 0,0,0 } };
+            var matrix = new int[][] { new int[] { 0, 1, 0 }, new int[] { 0, 0, 1 }, new int[] { 1, 1, 1 }, new int[] { 0, 0, 0 } };
 
             Helperrs.PrintMatrix(matrix);
             solution.GameOfLife(matrix);
@@ -181,7 +181,66 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(0, solution.MaxArea(new int[] { 0, 0 }));
             Assert.Equal(2, solution.MaxArea(new int[] { 1, 0, 1 }));
             Assert.Equal(0, solution.MaxArea(new int[] { 1 }));
-            Assert.Equal(0, solution.MaxArea(new int[] {  }));
+            Assert.Equal(0, solution.MaxArea(new int[] { }));
+        }
+
+        [Fact]
+        public void SetMatrixZeroesProblemTest()
+        {
+            var solution = new SetMatrixZeroesProblem();
+
+            var matrix = new int[,] { { 1, 1, 1 }, { 1, 0, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
+
+            Helperrs.PrintMatrix(matrix);
+            solution.SetZeroes(matrix);
+            Helperrs.PrintMatrix(matrix);
+
+            var matrix2 = new int[,] { { 0, 1, 1 }, { 1, 0, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
+
+            Helperrs.PrintMatrix(matrix2);
+            solution.SetZeroes(matrix2);
+            Helperrs.PrintMatrix(matrix2);
+
+            matrix2 = new int[,] { { 1, 0 } };
+
+            Helperrs.PrintMatrix(matrix2);
+            solution.SetZeroes(matrix2);
+            Helperrs.PrintMatrix(matrix2);
+
+            matrix2 = new int[,] { { 0 }, { 1 } };
+
+            Helperrs.PrintMatrix(matrix2);
+            solution.SetZeroes(matrix2);
+            Helperrs.PrintMatrix(matrix2);
+
+            matrix2 = new int[,] { { 0 } };
+
+            Helperrs.PrintMatrix(matrix2);
+            solution.SetZeroes(matrix2);
+            Helperrs.PrintMatrix(matrix2);
+
+
+            matrix2 = new int[,] { { 1 } };
+
+            Helperrs.PrintMatrix(matrix2);
+            solution.SetZeroes(matrix2);
+            Helperrs.PrintMatrix(matrix2);
+
+            matrix2 = new int[,] { { 1, 1, 1 }, { 0, 1, 2 } };
+            Helperrs.PrintMatrix(matrix2);
+            solution.SetZeroes(matrix2);
+            Helperrs.PrintMatrix(matrix2);
+
+            matrix2 = new int[,] { { 1, 0, 3 } };
+            Helperrs.PrintMatrix(matrix2);
+            solution.SetZeroes(matrix2);
+            Helperrs.PrintMatrix(matrix2);
+
+
+            matrix2 = new int[,] { {-4, -2, 6, -7, 0} , {-8,6,-8,-6,0} , {7,2,-9,-6,-1} };
+            Helperrs.PrintMatrix(matrix2);
+            solution.SetZeroes(matrix2);
+            Helperrs.PrintMatrix(matrix2);
         }
     }
 }
