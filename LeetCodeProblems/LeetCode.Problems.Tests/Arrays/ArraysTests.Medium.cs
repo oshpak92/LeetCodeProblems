@@ -254,5 +254,31 @@ namespace LeetCode.Problems.Tests.Arrays
             //Assert.Equal(0, solution.UniquePaths(0, 0));
             Assert.Equal(70, solution.UniquePaths(5, 5));
         }
+
+        [Fact]
+        public void MergeIntervalsProblemTest()
+        {
+            var solution = new MergeIntervalsProblem();
+            Assert.Equal(3, solution.Merge(new List<Interval>() {
+                new Interval(1,3),
+                new Interval(2,6),
+                new Interval(8,10),
+                new Interval(15,18)
+            }).Count);
+
+            Assert.Equal(1, solution.Merge(new List<Interval>() {
+                new Interval(1,4),
+                new Interval(4,5)
+            }).Count);
+
+            Assert.Equal(1, solution.Merge(new List<Interval>() {
+                new Interval(1,4)
+            }).Count);
+
+            Assert.Equal(0, solution.Merge(new List<Interval>() {
+            }).Count);
+
+            Assert.Null(solution.Merge(null));
+        }
     }
 }
