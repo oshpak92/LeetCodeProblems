@@ -20,5 +20,15 @@ namespace LeetCode.Problems.Tests.Math.Easy
             Assert.Equal(0, solution.Reverse(1534236469));
             Assert.Equal(0, solution.Reverse(-2147483648));
         }
+
+        [Fact]
+        public void FactorialTrailingZeroesProblemTest()
+        {
+            var solution = new FactorialTrailingZeroesProblem();
+            Assert.Equal(0, solution.TrailingZeroes(3));
+            Assert.Equal(1, solution.TrailingZeroes(5));
+            Assert.Equal(3, solution.TrailingZeroes(15));
+            Assert.Equal(7, solution.TrailingZeroes(30));
+        }
     }
 }
