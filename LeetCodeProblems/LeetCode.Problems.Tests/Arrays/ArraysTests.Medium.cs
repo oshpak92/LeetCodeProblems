@@ -237,7 +237,7 @@ namespace LeetCode.Problems.Tests.Arrays
             Helperrs.PrintMatrix(matrix2);
 
 
-            matrix2 = new int[,] { {-4, -2, 6, -7, 0} , {-8,6,-8,-6,0} , {7,2,-9,-6,-1} };
+            matrix2 = new int[,] { { -4, -2, 6, -7, 0 }, { -8, 6, -8, -6, 0 }, { 7, 2, -9, -6, -1 } };
             Helperrs.PrintMatrix(matrix2);
             solution.SetZeroes(matrix2);
             Helperrs.PrintMatrix(matrix2);
@@ -304,6 +304,31 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.False(solution.CanJump(new int[] { 3, 2, 1, 0, 4 }));
             Assert.False(solution.CanJump(new int[] { 0, 2, 1, 0, 4 }));
             Assert.True(solution.CanJump(new int[] { 2, 0 }));
+        }
+
+        [Fact]
+        public void SpiralMatrixProblemTest()
+        {
+            var solution = new SpiralMatrixProblem();
+
+            var matrix = new int[,] { { 1, 2, 3 }, { 8, 9, 4 }, { 7, 6, 5 } };
+
+            Helperrs.PrintMatrix(matrix);
+            var result = solution.SpiralOrder(matrix);
+            Assert.Equal(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, result);
+            Helperrs.PrintArray(result);
+
+            matrix = new int[,] { { 1, 2, 3, 4 }, { 12, 13, 14, 5 }, { 11, 16, 15, 6 }, { 10, 9, 8, 7 } };
+            Helperrs.PrintMatrix(matrix);
+            result = solution.SpiralOrder(matrix);
+            Helperrs.PrintArray(result);
+            Assert.Equal(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }, result);
+
+            matrix = new int[,] { {1, 2, 3, 4},{5,6,7,8},{9,10,11,12} };
+            Helperrs.PrintMatrix(matrix);
+            result = solution.SpiralOrder(matrix);
+            Helperrs.PrintArray(result);
+            Assert.Equal(new int[] { 1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7 }, result);
         }
     }
 }

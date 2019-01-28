@@ -34,6 +34,11 @@ namespace LeetCode.Problems.Utils
             Debug.WriteLine(builder.ToString());
         }
 
+        public static void PrintArray(IList<int> nums)
+        {
+            Debug.WriteLine(string.Join(",", nums));
+        }
+
 
         public static void PrintMatrix(int[][] matrix)
         {
