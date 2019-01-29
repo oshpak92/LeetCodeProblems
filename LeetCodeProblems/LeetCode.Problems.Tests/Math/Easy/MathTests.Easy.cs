@@ -30,5 +30,27 @@ namespace LeetCode.Problems.Tests.Math.Easy
             Assert.Equal(3, solution.TrailingZeroes(15));
             Assert.Equal(7, solution.TrailingZeroes(30));
         }
+
+
+        [Fact]
+        public void RomantoIntegerProblemTest()
+        {
+            var solution = new RomantoIntegerProblem();
+            Assert.Equal(3, solution.RomanToInt("III"));
+            Assert.Equal(4, solution.RomanToInt("IV"));
+            Assert.Equal(9, solution.RomanToInt("IX"));
+            Assert.Equal(58, solution.RomanToInt("LVIII"));
+            Assert.Equal(1994, solution.RomanToInt("MCMXCIV"));
+        }
+
+        [Fact]
+        public void ExcelSheetColumnNumberProblemTest()
+        {
+            var solution = new ExcelSheetColumnNumberProblem();
+            Assert.Equal(1, solution.TitleToNumber("A"));
+            Assert.Equal(28, solution.TitleToNumber("AB"));
+            Assert.Equal(701, solution.TitleToNumber("ZY"));
+            Assert.Equal(703, solution.TitleToNumber("AAA"));
+        }
     }
 }
