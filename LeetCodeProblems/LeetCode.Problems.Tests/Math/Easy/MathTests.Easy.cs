@@ -67,5 +67,14 @@ namespace LeetCode.Problems.Tests.Math.Easy
             var solution = new PowerofThreeProblem();
             Assert.True(solution.IsPowerOfThree(27));
         }
+
+        [Fact]
+        public void SqrtxProblemTest()
+        {
+            var solution = new SqrtxProblem();
+            Assert.Equal(6, solution.MySqrt(36));
+            Assert.Equal(4, solution.MySqrt(16));
+            Assert.Equal(3, solution.MySqrt(9));
+        }
     }
 }
