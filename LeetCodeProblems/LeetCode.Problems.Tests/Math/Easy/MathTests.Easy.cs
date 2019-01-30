@@ -60,5 +60,12 @@ namespace LeetCode.Problems.Tests.Math.Easy
             Assert.True(solution.IsHappy(19));
             Assert.False(solution.IsHappy(2));
         }
+
+        [Fact]
+        public void PowerofThreeProblemTest()
+        {
+            var solution = new PowerofThreeProblem();
+            Assert.True(solution.IsPowerOfThree(27));
+        }
     }
 }
