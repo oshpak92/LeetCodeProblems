@@ -52,5 +52,13 @@ namespace LeetCode.Problems.Tests.Math.Easy
             Assert.Equal(701, solution.TitleToNumber("ZY"));
             Assert.Equal(703, solution.TitleToNumber("AAA"));
         }
+
+        [Fact]
+        public void HappyNumberProblemTest()
+        {
+            var solution = new HappyNumberProblem();
+            Assert.True(solution.IsHappy(19));
+            Assert.False(solution.IsHappy(2));
+        }
     }
 }
