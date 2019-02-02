@@ -76,5 +76,14 @@ namespace LeetCode.Problems.Tests.Math.Easy
             Assert.Equal(4, solution.MySqrt(16));
             Assert.Equal(3, solution.MySqrt(9));
         }
+
+        [Fact]
+        public void IsPrimeProblemTest()
+        {
+            var solution = new IsPrimeProblem();
+            Assert.Equal(4, solution.CountPrimes(10));
+            var result = solution.CountPrimes(499979);
+            //Assert.Equal(4, solution.CountPrimes(499979));
+        }
     }
 }
