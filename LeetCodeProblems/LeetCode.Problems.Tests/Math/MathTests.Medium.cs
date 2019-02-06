@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using static LeetCode.Problems.Math.Medium.AddTwoNumbersProblem;
 
 namespace LeetCode.Problems.Tests.Math.Medium
 {
@@ -14,6 +15,63 @@ namespace LeetCode.Problems.Tests.Math.Medium
         {
             var solution = new PerfectSquaresProblem();
             Assert.Equal(3, solution.NumSquares(12));
+        }
+
+        [Fact]
+        public void AddTwoNumbersProblemTest()
+        {
+            //342
+            var l1 = new ListNode(2)
+            {
+                next = new ListNode(4)
+                {
+                    next = new ListNode(3)
+                }
+            };
+
+            //465
+            var l2 = new ListNode(5)
+            {
+                next = new ListNode(6)
+                {
+                    next = new ListNode(4)
+                }
+            };
+
+            var solution = new AddTwoNumbersProblem();
+            var result = solution.AddTwoNumbers(l1, l2);
+            Assert.Equal(7, result.val);
+            Assert.Equal(0, result.next.val);
+            Assert.Equal(8, result.next.next.val);
+            Assert.Null(result.next.next.next);
+
+            //342
+            l1 = new ListNode(2)
+            {
+                next = new ListNode(4)
+                {
+                    next = new ListNode(3)
+                }
+            };
+
+            //465
+            l2 = new ListNode(5)
+            {
+                next = new ListNode(6)
+                {
+                    next = new ListNode(4)
+                    {
+                        next = new ListNode(9)
+                    }
+                }
+            };
+
+            result = solution.AddTwoNumbers(l1, l2);
+            Assert.Equal(7, result.val);
+            Assert.Equal(0, result.next.val);
+            Assert.Equal(8, result.next.next.val);
+            Assert.Equal(9, result.next.next.next.val);
+            Assert.Null(result.next.next.next.next);
         }
     }
 }
