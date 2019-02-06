@@ -82,7 +82,7 @@ namespace LeetCode.Problems.Tests.Math.Easy
         {
             var solution = new IsPrimeProblem();
             Assert.Equal(4, solution.CountPrimes(10));
-            var result = solution.CountPrimes(499979);
+            //var result = solution.CountPrimes(499979);
             //Assert.Equal(4, solution.CountPrimes(499979));
         }
     }

@@ -16,21 +16,25 @@ namespace LeetCode.Problems.Math.Easy
         public int CountPrimes(int n)
         {
             var flags = new bool[n];
-            for(int i = 2; i < n; i++)
+            for (int i = 2; i < n; i++)
                 flags[i] = true;
 
             var count = 0;
-
-            //all numbers more than sqrt(n) must have already by been marked 
-            //because of second loop
-            for(int i = 2; i *i < n; i++)
+            for (int i = 2; i < n; i++)
             {
-                for (int j = i*i; j < n; j += i)
+                if (!flags[i]) continue;
+
+                for (int j = i * i; j < n; j += i)
                 {
                     flags[j] = false;
                 }
             }
-            count = flags.Where(f=>f).Count();
+
+            for (int i = 2; i < n; i++)
+            {
+                if (flags[i])
+                    count++;
+            }
 
             return count;
         }
