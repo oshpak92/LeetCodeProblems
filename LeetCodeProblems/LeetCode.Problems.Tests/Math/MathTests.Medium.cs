@@ -73,5 +73,18 @@ namespace LeetCode.Problems.Tests.Math.Medium
             Assert.Equal(9, result.next.next.next.val);
             Assert.Null(result.next.next.next.next);
         }
+
+        [Fact]
+        public void PowProblemTest()
+        {
+            var solution = new PowProblem();
+            //Assert.Equal(8, solution.MyPow(2, 3));
+            //Assert.Equal(1024, solution.MyPow(2, 10));
+            //Assert.Equal(0.25, solution.MyPow(2, -2));
+            //Assert.Equal(1, solution.MyPow(2, 0));
+            //Assert.Equal(1, solution.MyPow(0.00001, 2147483647));
+            Assert.Equal(1, solution.MyPow(1.0, -2147483648));
+        }
+
     }
 }
