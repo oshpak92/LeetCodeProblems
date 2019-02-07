@@ -11,6 +11,7 @@ namespace LeetCode.Problems.Math.Medium
     /// </summary>
     public class PowProblem
     {
+        //TODO: change to use recursion
         public double MyPow(double x, int n)
         {
             //try to use binary search here
@@ -36,10 +37,6 @@ namespace LeetCode.Problems.Math.Medium
                 {
                     result *= x;
                     pow++;
-                }
-                if (pow == int.MaxValue - 1)
-                {
-
                 }
             }
 

@@ -78,12 +78,29 @@ namespace LeetCode.Problems.Tests.Math.Medium
         public void PowProblemTest()
         {
             var solution = new PowProblem();
-            //Assert.Equal(8, solution.MyPow(2, 3));
-            //Assert.Equal(1024, solution.MyPow(2, 10));
-            //Assert.Equal(0.25, solution.MyPow(2, -2));
-            //Assert.Equal(1, solution.MyPow(2, 0));
-            //Assert.Equal(1, solution.MyPow(0.00001, 2147483647));
+            Assert.Equal(8, solution.MyPow(2, 3));
+            Assert.Equal(1024, solution.MyPow(2, 10));
+            Assert.Equal(0.25, solution.MyPow(2, -2));
+            Assert.Equal(1, solution.MyPow(2, 0));
+            Assert.Equal(1, solution.MyPow(0.00001, 2147483647));
             Assert.Equal(1, solution.MyPow(1.0, -2147483648));
+        }
+
+        [Fact]
+        public void FractiontoRecurringDecimalProblemTest()
+        {
+            var solution = new FractiontoRecurringDecimalProblem();
+            Assert.Equal("0.5", solution.FractionToDecimal(1, 2));
+            Assert.Equal("2", solution.FractionToDecimal(2, 1));
+            Assert.Equal("0.(6)", solution.FractionToDecimal(2, 3));
+            Assert.Equal("0", solution.FractionToDecimal(0, 3));
+            Assert.Equal("1", solution.FractionToDecimal(int.MaxValue, int.MaxValue));
+            Assert.Equal("1", solution.FractionToDecimal(int.MinValue, int.MinValue));
+            Assert.Equal("2", solution.FractionToDecimal(10, 5));
+            Assert.Equal("0.(012)", solution.FractionToDecimal(4, 333));
+            Assert.Equal("0.1(6)", solution.FractionToDecimal(1, 6));
+            Assert.Equal("-6.25", solution.FractionToDecimal(-50, 8));
+            Assert.Equal("-0.58(3)", solution.FractionToDecimal(7, -12));
         }
 
     }
