@@ -113,5 +113,27 @@ namespace LeetCode.Problems.Tests.Math.Medium
             Assert.Equal(2147483647, solution.Divide(-2147483648, -1));
         }
 
+        [Fact]
+        public void StringtoIntegerAtoiProblemTest()
+        {
+            var solution = new StringtoIntegerAtoiProblem();
+            Assert.Equal(42, solution.MyAtoi("42"));
+            Assert.Equal(-42, solution.MyAtoi("   -42"));
+            Assert.Equal(4193, solution.MyAtoi("4193 with words"));
+            Assert.Equal(0, solution.MyAtoi("words and 987"));
+            Assert.Equal(-2147483648, solution.MyAtoi("-91283472332"));
+            Assert.Equal(0, solution.MyAtoi("-0"));
+            Assert.Equal(-1, solution.MyAtoi("-1"));
+            Assert.Equal(1, solution.MyAtoi("+1"));
+            Assert.Equal(2147483647, solution.MyAtoi("2147483647"));
+            Assert.Equal(2147483647, solution.MyAtoi("2147483648"));
+            Assert.Equal(-2147483648, solution.MyAtoi("-2147483648"));
+            Assert.Equal(0, solution.MyAtoi("-"));
+            Assert.Equal(0, solution.MyAtoi("   "));
+            Assert.Equal(12345678, solution.MyAtoi("  0000000000012345678"));
+            Assert.Equal(0, solution.MyAtoi("  00000000000"));
+            Assert.Equal(2147483647, solution.MyAtoi("2147483800"));
+        }
+
     }
 }
