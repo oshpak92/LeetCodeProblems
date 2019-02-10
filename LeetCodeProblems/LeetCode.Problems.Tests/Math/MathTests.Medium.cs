@@ -103,5 +103,15 @@ namespace LeetCode.Problems.Tests.Math.Medium
             Assert.Equal("-0.58(3)", solution.FractionToDecimal(7, -12));
         }
 
+        [Fact]
+        public void DivideTwoIntegersProblemTest()
+        {
+            var solution = new DivideTwoIntegersProblem();
+            Assert.Equal(3, solution.Divide(7, 2));
+            Assert.Equal(-3, solution.Divide(-7, 2));
+            Assert.Equal(3, solution.Divide(-7, -2));
+            Assert.Equal(2147483647, solution.Divide(-2147483648, -1));
+        }
+
     }
 }
