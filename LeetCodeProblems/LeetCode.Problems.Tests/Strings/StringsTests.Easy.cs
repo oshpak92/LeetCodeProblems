@@ -1,4 +1,5 @@
 ﻿using LeetCode.Problems.Strings;
+using LeetCode.Problems.Strings.Easy;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,6 +36,15 @@ namespace LeetCode.Problems.Tests.Strings
             var solution = new FirstUniqueCharacterinaStringProblem();
             Assert.Equal(0, solution.FirstUniqChar("leetcode"));
             Assert.Equal(2, solution.FirstUniqChar("loveleetcode"));
+        }
+
+        [Fact]
+        public void ImplementstrStrProblemTest()
+        {
+            var solution = new ImplementstrStrProblem();
+            Assert.Equal(2, solution.StrStr("hello", "ll"));
+            Assert.Equal(-1, solution.StrStr("aaaaa", "bba"));
+            Assert.Equal(0, solution.StrStr("mississippi", "mississippi"));
         }
     }
 }
