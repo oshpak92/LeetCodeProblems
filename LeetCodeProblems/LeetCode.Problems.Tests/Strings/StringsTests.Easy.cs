@@ -28,5 +28,13 @@ namespace LeetCode.Problems.Tests.Strings
             solution.ReverseString(input);
             Assert.Equal(new char[] { 'e', 'h' }, input);
         }
+
+        [Fact]
+        public void FirstUniqueCharacterinaStringProblemTest()
+        {
+            var solution = new FirstUniqueCharacterinaStringProblem();
+            Assert.Equal(0, solution.FirstUniqChar("leetcode"));
+            Assert.Equal(2, solution.FirstUniqChar("loveleetcode"));
+        }
     }
 }
