@@ -46,5 +46,17 @@ namespace LeetCode.Problems.Tests.Strings
             Assert.Equal(-1, solution.StrStr("aaaaa", "bba"));
             Assert.Equal(0, solution.StrStr("mississippi", "mississippi"));
         }
+
+        [Fact]
+        public void LongestCommonPrefixProblemTest()
+        {
+            var solution = new LongestCommonPrefixProblem();
+            Assert.Equal("fl", solution.LongestCommonPrefix(new string[] { "flower", "flow", "flight" }));
+            Assert.Equal("", solution.LongestCommonPrefix(new string[] { "", "flow", "flight" }));
+            Assert.Equal("f", solution.LongestCommonPrefix(new string[] { "f", "flow", "flight" }));
+            Assert.Equal("f", solution.LongestCommonPrefix(new string[] { "flow", "f", "flow", "flight" }));
+            Assert.Equal("", solution.LongestCommonPrefix(new string[] { "flow", null, "flow", "flight" }));
+            Assert.Equal("flow", solution.LongestCommonPrefix(new string[] { "flow", "flow", "flow", "flow" }));
+        }
     }
 }
