@@ -58,5 +58,14 @@ namespace LeetCode.Problems.Tests.Strings
             Assert.Equal("", solution.LongestCommonPrefix(new string[] { "flow", null, "flow", "flight" }));
             Assert.Equal("flow", solution.LongestCommonPrefix(new string[] { "flow", "flow", "flow", "flow" }));
         }
+
+
+        [Fact]
+        public void ValidPalindromeProblemTest()
+        {
+            var solution = new ValidPalindromeProblem();
+            Assert.True(solution.IsPalindrome("A man, a plan, a canal: Panama"));
+            Assert.False(solution.IsPalindrome("race a car"));
+        }
     }
 }
