@@ -67,5 +67,16 @@ namespace LeetCode.Problems.Tests.Strings
             Assert.True(solution.IsPalindrome("A man, a plan, a canal: Panama"));
             Assert.False(solution.IsPalindrome("race a car"));
         }
+
+        [Fact]
+        public void ValidParenthesesProblemTest()
+        {
+            var solution = new ValidParenthesesProblem();
+            Assert.True(solution.IsValid("()"));
+            Assert.True(solution.IsValid("()[]{}"));
+            Assert.False(solution.IsValid("(]"));
+            Assert.False(solution.IsValid("([)]"));
+            Assert.True(solution.IsValid("{[]}"));
+        }
     }
 }
