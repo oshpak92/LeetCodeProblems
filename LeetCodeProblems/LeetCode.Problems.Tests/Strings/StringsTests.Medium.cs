@@ -2,6 +2,7 @@
 using LeetCode.Problems.Strings.Medium;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Xunit;
@@ -22,6 +23,18 @@ namespace LeetCode.Problems.Tests.Strings
             {
                 Assert.True(braketsValidator.IsValid(item));
             }
+        }
+
+        [Fact]
+        public void GroupAnagramsProblemTest()
+        {
+            var solution = new GroupAnagramsProblem();
+            var result = solution.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" } );
+            Assert.Equal(10, solution.GroupAnagrams(new string[] { "cab", "tin", "pew", "duh", "may", "ill", "buy", "bar", "max", "doc"} ).Count);
+
+            Assert.NotEqual(solution.SumStr("duh"), solution.SumStr("ill"));
+
+            Assert.Equal(3, result.Count());
         }
     }
 }
