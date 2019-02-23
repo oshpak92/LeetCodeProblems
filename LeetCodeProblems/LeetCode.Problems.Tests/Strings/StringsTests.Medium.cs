@@ -36,5 +36,16 @@ namespace LeetCode.Problems.Tests.Strings
 
             Assert.Equal(3, result.Count());
         }
+
+        [Fact]
+        public void LetterCombinationsofaPhoneNumberProblemTest()
+        {
+            var solution = new LetterCombinationsofaPhoneNumberProblem();
+            var result = solution.LetterCombinations("23");
+            foreach (var word in result)
+            {
+                Debug.WriteLine(result);
+            }
+        }
     }
 }
