@@ -96,5 +96,27 @@ namespace LeetCode.Problems.Tests.Strings
             Assert.Equal(3981312, solution.NumDecodings("9371597631128776948387197132267188677349946742344217846154932859125134924241649584251978418763151253"));
             Assert.Equal(5898240, solution.NumDecodings("1787897759966261825913315262377298132516969578441236833255596967132573482281598412163216914566534565"));
         }
+
+        [Fact]
+        public void BasicCalculatorIIProblemTest()
+        {
+            var solution = new BasicCalculatorIIProblem();
+
+            Assert.Equal("1 2 +", solution.ToPostfix("   1 + 2"));
+            Assert.Equal("1 2 3 *+", solution.ToPostfix("1 + 2 * 3"));
+            Assert.Equal(3, solution.Calculate("1 + 2"));
+            Assert.Equal(5, solution.Calculate("1 + 2 * 2"));
+            Assert.Equal(2, solution.Calculate("1 / 2 + 2 * 2 /     2"));
+        }
+
+        [Fact]
+        public void IntersectionofTwoArraysIIProblemTest()
+        {
+            var solution = new IntersectionofTwoArraysIIProblem();
+
+            Assert.Equal(new int[] { 2, 2 }, solution.Intersect(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 }));
+            Assert.Equal(new int[] { 4, 9 }, solution.Intersect(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 }));
+            Assert.Equal(new int[] { }, solution.Intersect(new int[] { }, new int[] { 9, 4, 9, 8, 4 }));
+        }
     }
 }
