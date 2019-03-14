@@ -330,5 +330,16 @@ namespace LeetCode.Problems.Tests.Arrays
             Helperrs.PrintArray(result);
             Assert.Equal(new int[] { 1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7 }, result);
         }
+
+        [Fact]
+        public void LongestIncreasingSubsequenceProblemTest()
+        {
+            var solution = new LongestIncreasingSubsequenceProblem();
+
+            Assert.Equal(4, solution.LengthOfLIS(new int[] { 10, 9, 2, 5, 3, 7, 101, 18 }));
+            Assert.Equal(3, solution.LengthOfLIS(new int[] { 10, 9, 2, 5, 3, 4 }));
+            Assert.Equal(1, solution.LengthOfLIS(new int[] { 10 }));
+            Assert.Equal(3, solution.LengthOfLIS(new int[] { 4, 10, 4, 3, 8, 9 }));
+        }
     }
 }
