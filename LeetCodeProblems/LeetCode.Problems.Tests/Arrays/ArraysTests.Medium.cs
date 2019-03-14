@@ -324,7 +324,7 @@ namespace LeetCode.Problems.Tests.Arrays
             Helperrs.PrintArray(result);
             Assert.Equal(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }, result);
 
-            matrix = new int[,] { {1, 2, 3, 4},{5,6,7,8},{9,10,11,12} };
+            matrix = new int[,] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
             Helperrs.PrintMatrix(matrix);
             result = solution.SpiralOrder(matrix);
             Helperrs.PrintArray(result);
@@ -340,6 +340,19 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(3, solution.LengthOfLIS(new int[] { 10, 9, 2, 5, 3, 4 }));
             Assert.Equal(1, solution.LengthOfLIS(new int[] { 10 }));
             Assert.Equal(3, solution.LengthOfLIS(new int[] { 4, 10, 4, 3, 8, 9 }));
+        }
+
+
+        [Fact]
+        public void WordSearchProblemTest()
+        {
+            var solution = new WordSearchProblem();
+
+            Assert.True(solution.Exist(new char[,] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } }, "ABCCED"));
+            Assert.True(solution.Exist(new char[,] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } }, "SEE"));
+            Assert.False(solution.Exist(new char[,] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } }, "ABCB"));
+            Assert.True(solution.Exist(new char[,] { { 'a', 'b' }, { 'c', 'd' } }, "cdba"));
+            Assert.True(solution.Exist(new char[,] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'E', 'S' }, { 'A', 'D', 'E', 'E'} }, "ABCESEEEFS"));
         }
     }
 }
