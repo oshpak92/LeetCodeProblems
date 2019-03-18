@@ -275,7 +275,8 @@ namespace LeetCode.Problems.Tests.Arrays
                 new Interval(1,4)
             }).Count);
 
-            Assert.Equal(0, solution.Merge(new List<Interval>() {
+            Assert.Equal(0, solution.Merge(new List<Interval>()
+            {
             }).Count);
 
             Assert.Null(solution.Merge(null));
@@ -352,7 +353,60 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.True(solution.Exist(new char[,] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } }, "SEE"));
             Assert.False(solution.Exist(new char[,] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } }, "ABCB"));
             Assert.True(solution.Exist(new char[,] { { 'a', 'b' }, { 'c', 'd' } }, "cdba"));
-            Assert.True(solution.Exist(new char[,] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'E', 'S' }, { 'A', 'D', 'E', 'E'} }, "ABCESEEEFS"));
+            Assert.True(solution.Exist(new char[,] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'E', 'S' }, { 'A', 'D', 'E', 'E' } }, "ABCESEEEFS"));
+        }
+
+        [Fact]
+        public void SortColorsProblemsTest()
+        {
+            var solution = new SortColorsProblems();
+            var input = new int[] { 2, 0, 2, 1, 1, 0 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 0, 1, 1, 2, 2 }, input);
+
+            input = new int[] { 2, 0, 2, 0 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 0, 2, 2 }, input);
+
+            input = new int[] { 1, 0, 1, 0 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 0, 1, 1 }, input);
+
+            input = new int[] { 1, 0, };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 1 }, input);
+
+            input = new int[] { 0, 0 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 0 }, input);
+
+            input = new int[] { 0, 2 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 2 }, input);
+
+            input = new int[] { 0, 2, 1 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 1, 2 }, input);
+
+            input = new int[] { 0, 2, 1, 1 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 1, 1, 2 }, input);
+
+            input = new int[] { 2, 2 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 2, 2 }, input);
+
+            input = new int[] { 1, 1 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 1, 1 }, input);
+
+            input = new int[] { 2, 0, 2 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 2, 2 }, input);
+
+            input = new int[] { 0, 2, 2, 2, 0, 2, 1, 1 };
+            solution.SortColors(input);
+            Assert.Equal(new int[] { 0, 0, 1, 1, 2, 2, 2, 2 }, input);
         }
     }
 }
