@@ -21,9 +21,9 @@ namespace LeetCode.Problems.Tests.Strings
             solution.ReverseString(input);
             Assert.Equal(new char[] { 'h' }, input);
 
-            input = new char[] {  };
+            input = new char[] { };
             solution.ReverseString(input);
-            Assert.Equal(new char[] {  }, input);
+            Assert.Equal(new char[] { }, input);
 
             input = new char[] { 'h', 'e' };
             solution.ReverseString(input);
@@ -77,6 +77,28 @@ namespace LeetCode.Problems.Tests.Strings
             Assert.False(solution.IsValid("(]"));
             Assert.False(solution.IsValid("([)]"));
             Assert.True(solution.IsValid("{[]}"));
+        }
+
+        [Fact]
+        public void FizzBuzzProblemTest()
+        {
+            var solution = new FizzBuzzProblem();
+            Assert.Equal(new List<string>() { "1",
+                "2",
+                "Fizz",
+                "4",
+                "Buzz",
+                "Fizz",
+                "7",
+                "8",
+                "Fizz",
+                "Buzz",
+                "11",
+                "Fizz",
+                "13",
+                "14",
+                "FizzBuzz"}, 
+                solution.FizzBuzz(15));
         }
     }
 }
