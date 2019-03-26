@@ -6,7 +6,7 @@ using Xunit;
 
 namespace LeetCode.Problems.Tests.LinkedList
 {
-    public class LinkedListTests
+    public partial class LinkedListTests
     {
         [Fact]
         public void RemoveNthNodeFromEndofListProblemTest()
