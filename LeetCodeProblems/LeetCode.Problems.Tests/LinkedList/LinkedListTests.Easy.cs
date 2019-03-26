@@ -48,5 +48,49 @@ namespace LeetCode.Problems.Tests.LinkedList
             Assert.False(solution.HasCycle(head));
             Assert.False(solution.HasCycle(null));
         }
+
+        [Fact]
+        public void PalindromeLinkedListProblemTest()
+        {
+            var solution = new PalindromeLinkedListProblem();
+            var head = new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    next = new ListNode(3)
+                    {
+                        next = new ListNode(2)
+                        {
+                            next = new ListNode(1)
+                        }
+                    }
+                }
+            };
+            Assert.True(solution.IsPalindrome(head));
+            head = new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    next = new ListNode(3)
+                    {
+                        next = new ListNode(4)
+                        {
+                            next = new ListNode(5)
+                        }
+                    }
+                }
+            };
+            Assert.False(solution.IsPalindrome(head));
+            Assert.False(solution.IsPalindrome(null));
+
+            head = new ListNode(1);
+            Assert.True(solution.IsPalindrome(head));
+
+            head = new ListNode(1)
+            {
+                next = new ListNode(2)
+            };
+            Assert.False(solution.IsPalindrome(head));
+        }
     }
 }
