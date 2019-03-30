@@ -408,5 +408,13 @@ namespace LeetCode.Problems.Tests.Arrays
             solution.SortColors(input);
             Assert.Equal(new int[] { 0, 0, 1, 1, 2, 2, 2, 2 }, input);
         }
+
+        [Fact]
+        public void ThreeSumProblemTest()
+        {
+            var solution = new ThreeSumProblem();
+            Assert.Equal(new List<IList<int>> { new List<int>() { -1, -1, 2 }, new List<int>() { -1, 0, 1 } }, 
+                solution.ThreeSum(new int[] { -1, 0, 1, 2, -1, -4 }));
+        }
     }
 }
