@@ -416,5 +416,32 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(new List<IList<int>> { new List<int>() { -1, -1, 2 }, new List<int>() { -1, 0, 1 } }, 
                 solution.ThreeSum(new int[] { -1, 0, 1, 2, -1, -4 }));
         }
+
+        [Fact]
+        public void KthSmallestElementinaBSTProblemTest()
+        {
+            var solution = new KthSmallestElementinaBSTProblem();
+            var root = new TreeNode(3)
+            {
+                left = new TreeNode(1)
+                {
+                    right = new TreeNode(2)
+                },
+                right = new TreeNode(4)
+            };
+            Assert.Equal(1, solution.KthSmallest(root, 1));
+
+            root = new TreeNode(5)
+            {
+                left = new TreeNode(3) {
+                    left = new TreeNode(2) {
+                        left = new TreeNode(1) { }
+                    },
+                    right = new TreeNode(4)
+                },
+                right = new TreeNode(6) { }
+            };
+            Assert.Equal(3, solution.KthSmallest(root, 3));
+        }
     }
 }
