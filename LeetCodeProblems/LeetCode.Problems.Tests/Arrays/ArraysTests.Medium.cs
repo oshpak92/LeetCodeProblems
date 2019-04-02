@@ -413,7 +413,7 @@ namespace LeetCode.Problems.Tests.Arrays
         public void ThreeSumProblemTest()
         {
             var solution = new ThreeSumProblem();
-            Assert.Equal(new List<IList<int>> { new List<int>() { -1, -1, 2 }, new List<int>() { -1, 0, 1 } }, 
+            Assert.Equal(new List<IList<int>> { new List<int>() { -1, -1, 2 }, new List<int>() { -1, 0, 1 } },
                 solution.ThreeSum(new int[] { -1, 0, 1, 2, -1, -4 }));
         }
 
@@ -433,8 +433,10 @@ namespace LeetCode.Problems.Tests.Arrays
 
             root = new TreeNode(5)
             {
-                left = new TreeNode(3) {
-                    left = new TreeNode(2) {
+                left = new TreeNode(3)
+                {
+                    left = new TreeNode(2)
+                    {
                         left = new TreeNode(1) { }
                     },
                     right = new TreeNode(4)
@@ -442,6 +444,17 @@ namespace LeetCode.Problems.Tests.Arrays
                 right = new TreeNode(6) { }
             };
             Assert.Equal(3, solution.KthSmallest(root, 3));
+        }
+
+        [Fact]
+        public void FourSumIIProblemTest()
+        {
+            var solution = new FourSumIIProblem();
+            Assert.Equal(2, solution.FourSumCount(new int[] { 1, 2 }
+            , new int[] { -2, -1 }
+            , new int[] { -1, 2 }
+            , new int[] { 0, 2 }
+            ));
         }
     }
 }
