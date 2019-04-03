@@ -456,5 +456,12 @@ namespace LeetCode.Problems.Tests.Arrays
             , new int[] { 0, 2 }
             ));
         }
+
+        [Fact]
+        public void KthSmallestElementinaSortedMatrixProblemTest()
+        {
+            var solution = new KthSmallestElementinaSortedMatrixProblem();
+            Assert.Equal(13, solution.KthSmallest(new int[][] { new int[] { 1, 5, 9 }, new int[] { 10, 11, 13 }, new int[] { 12, 13, 15 } }, 8));
+        }
     }
 }
