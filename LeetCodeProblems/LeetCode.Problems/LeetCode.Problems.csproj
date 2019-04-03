@@ -8,8 +8,4 @@
     <ProjectReference Include="..\LeetCode.Problems.Utils\LeetCode.Problems.Utils.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DP\Easy\" />
-  </ItemGroup>
-
 </Project>

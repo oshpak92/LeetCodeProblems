@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace LeetCode.Problems.Tests.DP.Medium
+namespace LeetCode.Problems.Tests.DP
 {
     public partial class DpTests
     {
