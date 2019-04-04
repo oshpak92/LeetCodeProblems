@@ -219,5 +219,13 @@ namespace LeetCode.Problems.Tests.Arrays
             solution.Rotate(input, 3);
             Assert.Equal(new int[] { 4, 5, 6, 1, 2, 3 }, input);
         }
+
+        [Fact]
+        public void DegreeofanArrayProblemTest()
+        {
+            var solution = new DegreeofanArrayProblem();
+            Assert.Equal(2, solution.FindShortestSubArray(new[] { 1, 2, 2, 3, 1 }));
+
+        }
     }
 }
