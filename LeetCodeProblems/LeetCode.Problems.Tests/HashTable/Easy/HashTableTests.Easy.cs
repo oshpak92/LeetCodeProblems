@@ -99,5 +99,13 @@ namespace LeetCode.Problems.Tests.HashTable.Easy
             Assert.False(solution.IsAlienSorted(new string[] { "apple", "app" }, "abcdefghijklmnopqrstuvwxyz"));
             Assert.True(solution.IsAlienSorted(new string[] { "apple" }, "abcdefghijklmnopqrstuvwxyz"));
         }
-    }
+
+	    [Fact]
+	    public void SingleNumberProblem()
+	    {
+		    var solution = new SingleNumberProblem();
+		    Assert.Equal(3, solution.SingleNumber(new int[] {1, 2, 1, 2, 3}));
+	    }
+
+	}
 }
