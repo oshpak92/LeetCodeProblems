@@ -65,8 +65,10 @@ April
 
 November
 1. 136
+2. 1108
 
-Solved but in not optimal way:
+
+Solved but not in optimal way:
 169, 287, 26, 238, 289, 380, 162, 62, 56, 34, 50, 28, 5, 91, 79, 454, 198
 
 Not solved:
