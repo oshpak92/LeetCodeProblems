@@ -18,5 +18,6 @@ namespace LeetCode.Problems.HashTable.Easy
 
 			return buffer.First();
 		}
+
 	}
 }
