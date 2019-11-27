@@ -64,9 +64,11 @@ April
 
 
 November
-1. 136
-2. 1108
-3. 1266
+24. 136
+25. 1108
+26. 1266
+27. 807
+
 
 
 Solved but not in optimal way:
