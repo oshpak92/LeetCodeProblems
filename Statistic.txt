@@ -68,7 +68,7 @@ November
 25. 1108
 26. 1266
 27. 807
-
+28. 104
 
 
 Solved but not in optimal way:
