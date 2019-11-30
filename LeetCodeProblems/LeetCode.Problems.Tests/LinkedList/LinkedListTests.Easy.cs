@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using LeetCode.Problems.LinkedList;
+using LeetCode.Problems.LinkedList.Easy;
 
 namespace LeetCode.Problems.Tests.LinkedList
 {
@@ -92,5 +93,32 @@ namespace LeetCode.Problems.Tests.LinkedList
             };
             Assert.False(solution.IsPalindrome(head));
         }
+
+	    [Fact]
+	    public void ReverseLinkedList()
+	    {
+		    var solution = new ReverseLinkedListProblem();
+
+			var listNode = new ListNode(1)
+		    {
+			    next = new ListNode(2)
+			    {
+				    next = new ListNode(3)
+				    {
+					    next = new ListNode(4)
+					    {
+						    next = new ListNode(5)
+						    {
+							    next = null
+						    }
+					    }
+				    }
+			    }
+		    };
+		    var reversed = solution.ReverseList(listNode);
+			Assert.Null(listNode.next);
+			Assert.Equal(5, reversed.val);
+			Assert.Equal(4, reversed.next.val);
+	    }
     }
 }
