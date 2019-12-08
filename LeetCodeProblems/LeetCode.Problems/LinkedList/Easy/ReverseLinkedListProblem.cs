@@ -11,7 +11,6 @@ namespace LeetCode.Problems.LinkedList.Easy
 		public ListNode ReverseList(ListNode head)
 		{
 			var reversedHead = Reverse(head, null);
-			head.next = null;
 			return reversedHead;
 		}
 
@@ -25,14 +24,8 @@ namespace LeetCode.Problems.LinkedList.Easy
 				node.next = previousNode;
 				return node;
 			}
-			
 			var head = Reverse(node.next, node);
-
-			if(previousNode != null)
-				node.next = previousNode;
-			else
-				node.next = null;
-			
+			node.next = previousNode;
 			return head;
 		}
 	}

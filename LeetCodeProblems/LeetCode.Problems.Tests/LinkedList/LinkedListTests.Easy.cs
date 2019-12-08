@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-using LeetCode.Problems.LinkedList;
+﻿using LeetCode.Problems.LinkedList;
 using LeetCode.Problems.LinkedList.Easy;
+using Xunit;
 
 namespace LeetCode.Problems.Tests.LinkedList
 {
-    public partial class LinkedListTests
+	public partial class LinkedListTests
     {
         [Fact]
         public void LinkedListCycleProblemTest()
@@ -95,7 +92,7 @@ namespace LeetCode.Problems.Tests.LinkedList
         }
 
 	    [Fact]
-	    public void ReverseLinkedList()
+	    public void ReverseLinkedListProblemTest()
 	    {
 		    var solution = new ReverseLinkedListProblem();
 
@@ -120,5 +117,56 @@ namespace LeetCode.Problems.Tests.LinkedList
 			Assert.Equal(5, reversed.val);
 			Assert.Equal(4, reversed.next.val);
 	    }
+
+		[Fact]
+	    public void ReverseLinkedListIIProblemTest()
+	    {
+		    var solution = new ReverseLinkedListIIProblem();
+
+			var listNode = new ListNode(1)
+		    {
+			    next = new ListNode(2)
+			    {
+				    next = new ListNode(3)
+				    {
+					    next = new ListNode(4)
+					    {
+						    next = new ListNode(5)
+						    {
+							    next = new ListNode(6)
+						    }
+					    }
+				    }
+			    }
+		    };
+		    var reversed = solution.ReverseBetween(listNode, 1, 3);
+			Assert.Equal(3, reversed.val);
+			Assert.Equal(2, reversed.next.val);
+			Assert.Equal(1, reversed.next.next.val);
+			Assert.Equal(4, reversed.next.next.next.val);
+
+		    listNode = new ListNode(1)
+		    {
+			    next = new ListNode(2)
+			    {
+				    next = new ListNode(3)
+				    {
+					    next = new ListNode(4)
+					    {
+						    next = new ListNode(5)
+						    {
+							    next = new ListNode(6)
+						    }
+					    }
+				    }
+			    }
+		    };
+
+		    reversed = solution.ReverseBetween(listNode, 2, 3);
+		    Assert.Equal(1, reversed.val);
+		    Assert.Equal(3, reversed.next.val);
+		    Assert.Equal(2, reversed.next.next.val);
+		    Assert.Equal(4, reversed.next.next.next.val);
+		}
     }
 }
