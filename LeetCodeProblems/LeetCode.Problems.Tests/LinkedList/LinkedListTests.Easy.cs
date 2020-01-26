@@ -168,5 +168,25 @@ namespace LeetCode.Problems.Tests.LinkedList
 		    Assert.Equal(2, reversed.next.next.val);
 		    Assert.Equal(4, reversed.next.next.next.val);
 		}
-    }
+
+		[Fact]
+	    public void DeleteNodeinaLinkedListProblemTest()
+		{
+			var solution = new DeleteNodeinaLinkedListProblem();
+			var list = new ListNode(4)
+			{
+				next = new ListNode(5)
+				{
+					next = new ListNode(1)
+					{
+						next = new ListNode(9)
+					}
+				}
+			};
+			solution.DeleteNode(list.next);
+			Assert.Equal(1, list.next.val);
+			Assert.Equal(4, list.val);
+		}
+
+	}
 }
