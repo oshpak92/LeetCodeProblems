@@ -76,6 +76,7 @@ December
 
 January
 26. 237
+27. 242
 
 
 Solved but not in optimal way:
