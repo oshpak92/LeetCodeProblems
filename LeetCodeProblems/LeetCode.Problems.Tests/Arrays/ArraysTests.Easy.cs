@@ -227,5 +227,20 @@ namespace LeetCode.Problems.Tests.Arrays
             Assert.Equal(2, solution.FindShortestSubArray(new[] { 1, 2, 2, 3, 1 }));
 
         }
-    }
+
+		[Fact]
+	    public void BestTimeToSellAndBestTimeToBuyProblemV2Test()
+		{
+			var solution = new BestTimeToSellAndBestTimeToBuyProblemV2();
+			var input = new [] { 7, 1, 5, 3, 6, 4 };
+			Assert.Equal(5 , solution.MaxProfit(input));
+
+			input = new[] { 7, 6, 4, 3, 1 };
+			Assert.Equal(0, solution.MaxProfit(input));
+
+			input = new[] {1, 2};
+			Assert.Equal(1, solution.MaxProfit(input));
+		}
+
+	}
 }
