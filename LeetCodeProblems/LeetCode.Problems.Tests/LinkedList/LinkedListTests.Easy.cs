@@ -1,6 +1,8 @@
-﻿using LeetCode.Problems.LinkedList;
+﻿using System;
+using LeetCode.Problems.LinkedList;
 using LeetCode.Problems.LinkedList.Easy;
 using Xunit;
+using Xunit.Sdk;
 
 namespace LeetCode.Problems.Tests.LinkedList
 {
@@ -188,5 +190,49 @@ namespace LeetCode.Problems.Tests.LinkedList
 			Assert.Equal(4, list.val);
 		}
 
-	}
+        [Fact]
+        public void MergeTwoSortedListsProblemTest()
+        {
+            var solution = new MergeTwoSortedListsProblem();
+
+            var l1 = new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    next = new ListNode(4)
+                    {
+                       // next = new ListNode(3)
+                    }
+                }
+            };
+
+            var l2 = new ListNode(1)
+            {
+                next = new ListNode(3)
+                {
+                    next = new ListNode(4)
+                    {
+                        //next = new ListNode(5)
+                        //{
+                        //    next = new ListNode(6)
+                        //}
+                    }
+                }
+            };
+
+            var result = solution.MergeTwoLists(l1, l2);
+            var previous = result.val;
+            while (result != null)
+            {
+
+                if (result.val < previous)
+                    throw new Exception();
+
+                previous = result.val;
+                result = result.next;
+            }
+        }
+
+
+    }
 }
